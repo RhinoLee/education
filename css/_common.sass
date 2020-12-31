@@ -1,7 +1,12 @@
+$color_green: #27AE61
+
 %clearfix::after 
   content: ''
   display: block
   clear: both
+@mixin button($width, $bg_color) 
+  width: $width
+  background-color: $bg_color
 * 
   box-sizing: border-box
 img 
@@ -10,5 +15,19 @@ img
 
 a 
   text-decoration: none
-  
+
+a.button 
+  +button(195px, $color_green)
+  display: block
+  margin: auto
+  margin-top: 55px
+  padding: 12px 22px
+  border-radius: 30px
+  font-size: 24px
+  letter-spacing: 1px
+  &::first-letter 
+    text-transform: uppercase
+
+
+    
 
