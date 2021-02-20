@@ -59,24 +59,40 @@ a {
     padding: 12px 10px;
     border-radius: 24px;
     font-size: 18px;
-    letter-spacing: 1px; }
+    letter-spacing: 1px;
+    color: #fff;
+    text-align: center; }
     a.button::first-letter {
       text-transform: uppercase; }
   [id^="section-"] {
     padding: 0 20px; }
-  h2.title {
+  h2.title, h3.title {
     font-family: 'Nunito Sans', sans-serif;
+    font-weight: bold;
     margin-bottom: 15px;
     font-size: 30px;
     color: #1A1A1A;
     line-height: 1.2;
     text-transform: capitalize;
     text-align: center; }
+  h3.title {
+    font-size: 24px; }
   p.intro {
     font-size: 14px;
     font-weight: normal;
     line-height: 1.2;
-    color: #484848; } }
+    color: #484848; }
+  .swiper-pagination-bullet {
+    border: 1px solid #fff;
+    width: 15px;
+    height: 15px;
+    background: transpsrent;
+    opacity: 1; }
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+      border: 1px solid #27AE61;
+      background: #27AE61; }
+  .swiper-pagination-bullets {
+    bottom: 10px; } }
 
 @media screen and (min-width: 320px) {
   .main-header {
@@ -140,17 +156,6 @@ a {
       transform: translate(-50%, -50%);
       width: 100%;
       text-align: center; }
-  .main-slider .swiper-pagination-bullet {
-    border: 1px solid #fff;
-    width: 15px;
-    height: 15px;
-    background: transpsrent;
-    opacity: 1; }
-    .main-slider .swiper-pagination-bullet.swiper-pagination-bullet-active {
-      border: 1px solid #27AE61;
-      background: #27AE61; }
-  .main-slider .swiper-pagination-bullets {
-    bottom: 10px; }
   #section-education {
     padding-top: 20px;
     padding-bottom: 50px; }
@@ -174,5 +179,66 @@ a {
           width: calc(100% - 40px);
           font-weight: bold;
           text-transform: capitalize;
-          font-size: 18px; } }
+          font-size: 18px; }
+  #section-features {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: #F1F1F1; }
+    #section-features h2.title {
+      margin-bottom: 36px; }
+    #section-features .pic {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 15px; }
+    #section-features .img-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      background: #fff; }
+    #section-features .txt {
+      margin-bottom: 60px; }
+    #section-features p.intro {
+      text-align: center; }
+    #section-features img {
+      position: relative;
+      display: inline;
+      width: auto;
+      height: auto;
+      z-index: 10; }
+  #section-courses {
+    margin-bottom: 70px;
+    padding-top: 30px;
+    padding-bottom: 40px; }
+    #section-courses .swiper-pagination {
+      position: relative;
+      bottom: auto;
+      margin-top: 20px; }
+    #section-courses .box {
+      background: #F1F1F1; }
+    #section-courses .txt {
+      padding: 20px; }
+      #section-courses .txt h3.title {
+        text-align: left; }
+    #section-courses .courses-desc {
+      padding-right: 40px;
+      padding-bottom: 12px; }
+    #section-courses .courses-info {
+      border-top: 2px solid #CFCFCF;
+      padding-top: 18px;
+      padding-bottom: 45px; }
+      #section-courses .courses-info li {
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: bold;
+        border-bottom: 1px solid #CFCFCF;
+        margin: auto;
+        padding: 10px 0;
+        width: 67%;
+        color: #1A1A1A;
+        text-transform: capitalize;
+        text-align: center; }
+    #section-courses .view-all {
+      display: none; } }
 
