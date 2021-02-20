@@ -50,6 +50,24 @@ img {
 a {
   text-decoration: none; }
 
+.row {
+  display: flex;
+  flex-wrap: wrap; }
+
+[class^='col-'] {
+  padding-left: 15px;
+  padding-right: 15px; }
+
+@media screen and (min-width: 320px) {
+  .col-sm-6 {
+    width: 50%; }
+  .col-sm-12 {
+    width: 100%; } }
+
+@media screen and (min-width: 768px) {
+  .col-md-4 {
+    width: 33.333333%; } }
+
 @media screen and (min-width: 320px) {
   a.button {
     width: 134px;
@@ -209,7 +227,6 @@ a {
       height: auto;
       z-index: 10; }
   #section-courses {
-    margin-bottom: 70px;
     padding-top: 30px;
     padding-bottom: 40px; }
     #section-courses .swiper-pagination {
@@ -240,5 +257,47 @@ a {
         text-transform: capitalize;
         text-align: center; }
     #section-courses .view-all {
-      display: none; } }
+      display: none; }
+  #section-teachers .box {
+    padding: 20px 0; }
+  #section-teachers .txt {
+    padding-top: 15px;
+    text-align: center; }
+  #section-teachers h3.title {
+    margin-bottom: 10px;
+    font-size: 18px; }
+  #section-teachers h4.job {
+    font-size: 16px; }
+  #section-programs {
+    padding-top: 30px;
+    padding-bottom: 60px; }
+    #section-programs .box {
+      position: relative;
+      margin-bottom: 20px; }
+      #section-programs .box::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(39, 174, 96, 0.8); }
+    #section-programs .txt {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 0 15px;
+      width: 100%;
+      z-index: 10;
+      text-align: center; }
+      #section-programs .txt > * {
+        color: #fff; }
+      #section-programs .txt p {
+        display: block;
+        margin: auto;
+        width: 60%;
+        font-size: 14px;
+        line-height: 1.6; } }
 
