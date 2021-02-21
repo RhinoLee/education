@@ -1,30 +1,50 @@
 // 載入轉存 css 檔案的套件
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-var config = {
-    entry: {
-        // 指定進入點並設定名稱及來源
-        // "名稱":"來源 scss or sass 檔案"
-        "style": "./css/style.sass"
+module.exports = {
+  resolve: {
+    alias: {
+      '@img': path.resolve(__dirname, 'src/img'),
     },
-    module: {
-        rules: [{
-            test: /\.(scss|sass)$/,
-            use: [
-                // 需要用到的 loader
-                MiniCssExtractPlugin.loader,
-                "css-loader",
-                "sass-loader"
-            ]
-        }]
-    },
-    plugins: [
-        new MiniCssExtractPlugin({
-            // 指定輸出位置
-            // [name] 為上方進入點設定的 "名稱"
-            filename: "./css/style.css"
-        })
-    ]
+  },
+  entry: {
+    main: './src/js/main.js',
+    slider: './src/js/slider.js'
+  },
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'js/[name].js',
+  },
+  module: {
+    rules: [
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: '../'
+            },
+          },
+          'css-loader',
+          'sass-loader'
+        ],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'img/[name].[ext]',
+            },
+          },
+        ],
+      },
+    ],
+  },
+  plugins: [new MiniCssExtractPlugin({
+    filename: 'css/[name].css',
+  })],
 };
-
-module.exports = config;

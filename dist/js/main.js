@@ -1,6 +1,6 @@
 /*
  * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
- * This devtool is not neither made for production nor for readable output files.
+ * This devtool is neither made for production nor for readable output files.
  * It uses "eval()" calls to create a separate source file in the browser devtools.
  * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
  * or disable the default devtool with "devtool: false".
@@ -10,13 +10,23 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./css/style.sass":
+/***/ "./src/sass/style.sass":
+/*!*****************************!*\
+  !*** ./src/sass/style.sass ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://education/./src/sass/style.sass?");
+
+/***/ }),
+
+/***/ "./src/js/main.js":
 /*!************************!*\
-  !*** ./css/style.sass ***!
+  !*** ./src/js/main.js ***!
   \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://education/./css/style.sass?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sass_style_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sass/style.sass */ \"./src/sass/style.sass\");\n\n\nconsole.log('main');\n\n//# sourceURL=webpack://education/./src/js/main.js?");
 
 /***/ })
 
@@ -58,9 +68,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 	})();
 /******/ 	
 /************************************************************************/
+/******/ 	
 /******/ 	// startup
-/******/ 	// Load entry module
-/******/ 	__webpack_require__("./css/style.sass");
-/******/ 	// This entry module used 'exports' so it can't be inlined
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/js/main.js");
+/******/ 	
 /******/ })()
 ;

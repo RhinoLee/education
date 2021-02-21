@@ -334,5 +334,7 @@ a {
       margin-top: 30px;
       line-height: 1.3; }
     #section-blog .button {
-      margin-top: 70px; } }
+      margin-top: 70px; }
+  #section-newsletter {
+    background-image: url(../img/newsletter_bg.png); } }
 
