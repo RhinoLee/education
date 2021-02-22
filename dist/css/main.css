@@ -34,7 +34,140 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.clearfix::after, .main-header .container::after {
+.clearfix::after, .main-header .header-container::after {
+  content: '';
+  display: block;
+  clear: both; }
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box; }
+
+img {
+  display: block;
+  width: 100%; }
+
+a {
+  text-decoration: none; }
+
+button {
+  border: none; }
+
+iframe {
+  display: block;
+  width: 100%; }
+
+input[type="text"], input[type="email"] {
+  display: block;
+  border: none;
+  width: 100%;
+  background: transparent;
+  outline: none; }
+
+.row {
+  display: flex;
+  flex-wrap: wrap; }
+
+[class^='col-'] {
+  padding-left: 15px;
+  padding-right: 15px; }
+
+@media screen and (min-width: 320px) {
+  .col-sm-6 {
+    width: 50%; }
+  .col-sm-12 {
+    width: 100%; } }
+
+@media screen and (min-width: 768px) {
+  .col-md-4 {
+    width: 33.333333%; }
+  .col-md-6 {
+    width: 50%; } }
+
+@media screen and (min-width: 320px) {
+  a.button, button {
+    width: 134px;
+    background-color: #27AE61;
+    display: block;
+    margin: auto;
+    padding: 12px 10px;
+    border-radius: 24px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #fff;
+    text-align: center; }
+    a.button::first-letter, button::first-letter {
+      text-transform: uppercase; }
+  [id^="section-"] {
+    padding: 0 20px; }
+  h2.title, h3.title {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 30px;
+    color: #1A1A1A;
+    line-height: 1.2;
+    text-transform: capitalize;
+    text-align: center; }
+  h3.title {
+    font-size: 24px; }
+  p.intro {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.2;
+    color: #484848; }
+  .swiper-pagination-bullet {
+    border: 1px solid #fff;
+    width: 15px;
+    height: 15px;
+    background: transpsrent;
+    opacity: 1; }
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+      border: 1px solid #27AE61;
+      background: #27AE61; }
+  .swiper-pagination.small .swiper-pagination-bullet {
+    width: 9px;
+    height: 9px; }
+  .swiper-pagination-bullets {
+    bottom: 10px; } }
+
+/* http://meyerweb.com/eric/tools/css/reset/
+ * v2.0 | 20110126
+ * License: none (public domain) */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.clearfix::after, .main-header .header-container::after {
   content: '';
   display: block;
   clear: both; }
@@ -132,25 +265,69 @@ input[type="text"], input[type="email"] {
     bottom: 10px; } }
 
 @media screen and (min-width: 320px) {
+  .mask {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 100;
+    transition: 1s .1s; }
+  body.menu-open .mask, body.menu-open .main-header .header-container .header-navbar {
+    left: 0; }
   .main-header {
-    padding: 20px;
-    background: #000; }
+    position: fixed;
+    width: 100%;
+    background: #000;
+    z-index: 1000; }
     .main-header a {
       color: #fff; }
+    .main-header .header-container {
+      position: relative;
+      padding: 20px; }
+      .main-header .header-container .bugger-menu {
+        position: absolute;
+        top: 24px;
+        right: 20px;
+        width: 30px;
+        cursor: pointer; }
+        .main-header .header-container .bugger-menu [class^='line-'] {
+          border-radius: 3px;
+          margin-bottom: 5px;
+          width: 100%;
+          height: 4px;
+          background: #fff; }
+      .main-header .header-container .header-navbar {
+        position: fixed;
+        top: 72px;
+        left: -280px;
+        padding: 30px 40px 30px 20px;
+        width: 280px;
+        height: calc(100% - 72px);
+        overflow: scroll;
+        background: rgba(39, 174, 97, 0.8);
+        transition: 1s; }
+    .main-header ul a {
+      display: block; }
+    .main-header ul.first-level > li > a {
+      border-bottom: 1px solid #fff;
+      padding: 20px 0px; }
+    .main-header ul.first-level a {
+      font-size: 20px; }
+    .main-header ul.second-level > li {
+      height: 0;
+      overflow: hidden;
+      transition: .5s; }
+    .main-header ul.second-level a {
+      padding: 10px 0px;
+      font-size: 16px; }
+    .main-header ul.second-level.open > li {
+      height: 36px; }
     .main-header .logo {
-      float: left; }
-    .main-header .header-navbar {
-      display: none; }
-    .main-header .bugger-menu {
-      padding-top: 3px;
-      float: right;
-      width: 30px; }
-      .main-header .bugger-menu [class^='line-'] {
-        border-radius: 3px;
-        margin-bottom: 5px;
-        width: 100%;
-        height: 4px;
-        background: #fff; }
+      float: left; } }
+
+@media screen and (min-width: 320px) {
   .main-slider .txt {
     max-width: 196px; }
     .main-slider .txt * {
@@ -359,7 +536,8 @@ input[type="text"], input[type="email"] {
       color: #fff; }
     #section-newsletter input {
       border-bottom: 1px solid #fff;
-      margin-top: 70px; }
+      margin-top: 70px;
+      caret-color: #fff; }
     #section-newsletter .button.sign {
       margin-top: 40px; }
   #section-contact {

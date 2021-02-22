@@ -10,7 +10,8 @@ module.exports = {
   },
   entry: {
     main: './src/js/main.js',
-    slider: './src/js/slider.js'
+    slider: './src/js/slider.js',
+    header: './src/js/header.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),

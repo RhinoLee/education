@@ -1,0 +1,83 @@
+@import reset
+@import common
+
+
+
+@media screen and (min-width: 320px)
+  
+  .mask
+    position: fixed
+    top: 0
+    left: -100%
+    width: 100%
+    height: 100%
+    background: rgba(#000, .9)
+    z-index: 100
+    transition: 1s .1s
+  body.menu-open 
+    .mask, .main-header .header-container .header-navbar
+      left: 0
+
+  .main-header 
+    position: fixed
+    width: 100%
+    background: #000
+    z-index: 1000
+    a 
+      color: #fff
+
+    .header-container 
+      @extend .clearfix
+      position: relative
+      padding: 20px
+      .bugger-menu 
+        position: absolute
+        top: 24px
+        right: 20px
+        width: 30px
+        cursor: pointer
+        [class ^= 'line-'] 
+          border-radius: 3px
+          margin-bottom: 5px
+          width: 100%
+          height: 4px
+          background: #fff
+      .header-navbar
+        position: fixed
+        top: 72px
+        left: -280px
+        padding: 30px 40px 30px 20px
+        width: 280px
+        height: calc(100% - 72px)
+        overflow: scroll
+        background: rgba($color_green, .8)
+        transition: 1s 
+
+
+    ul
+      a 
+        display: block
+      &.first-level
+        > li > a
+          border-bottom: 1px solid #fff
+          padding: 20px 0px
+        a 
+          font-size: 20px
+      &.second-level
+        > li 
+          height: 0
+          overflow: hidden
+          transition: .5s 
+        a 
+          padding: 10px 0px
+          font-size: 16px
+        &.open 
+          > li 
+            height: 36px
+    .logo 
+      float: left
+    
+
+
+
+    

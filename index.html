@@ -14,20 +14,42 @@
 <body>
   
   <header class="main-header">
-    <div class="container">
+    <div class="header-container">
 
       <div class="logo">
         <img src="./images/icon/logo.png" alt="education_logo">
       </div>
 
       <nav class="header-navbar">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Courses</a></li>
-          <li><a href="#">Teachers</a></li>
-          <li><a href="#">Programs</a></li>
-          <li><a href="#">Contact</a></li>
+        <ul class="first-level">
+          <li>
+            <a class="first-title" href="#">Home</a>
+          </li>
+          <li>
+            <a class="first-title" href="#">About</a>
+          </li>
+          <li>
+            <a class="first-title" href="#">Courses</a>
+            <ul class="second-level">
+              <li><a href="#">Courses - 1</a></li>
+              <li><a href="#">Courses - 2</a></li>
+              <li><a href="#">Courses - 3</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="first-title" href="#">Teachers</a>
+            <ul class="second-level">
+              <li><a href="#">Teacher - 1</a></li>
+              <li><a href="#">Teacher - 2</a></li>
+              <li><a href="#">Teacher - 3</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="first-title" href="#">Programs</a>
+          </li>
+          <li>
+            <a class="first-title" href="#">Contact</a>
+          </li>
         </ul>
       </nav>
 
@@ -889,7 +911,10 @@
     </div>
   </footer>
 
+  <div class="mask"></div>
+
   <script src="dist/js/main.js"></script>
   <script src="dist/js/slider.js"></script>
+  <script src="dist/js/header.js"></script>
 </body>
 </html>

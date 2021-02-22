@@ -1,5 +1,4 @@
 ;(function() {
-  
   let bannerSwiper = new Swiper('.main-slider .swiper-container', {
     // autoplay: {
     //   delay: 5000,
