@@ -50,6 +50,20 @@ img {
 a {
   text-decoration: none; }
 
+button {
+  border: none; }
+
+iframe {
+  display: block;
+  width: 100%; }
+
+input[type="text"], input[type="email"] {
+  display: block;
+  border: none;
+  width: 100%;
+  background: transparent;
+  outline: none; }
+
 .row {
   display: flex;
   flex-wrap: wrap; }
@@ -66,10 +80,12 @@ a {
 
 @media screen and (min-width: 768px) {
   .col-md-4 {
-    width: 33.333333%; } }
+    width: 33.333333%; }
+  .col-md-6 {
+    width: 50%; } }
 
 @media screen and (min-width: 320px) {
-  a.button {
+  a.button, button {
     width: 134px;
     background-color: #27AE61;
     display: block;
@@ -80,7 +96,7 @@ a {
     letter-spacing: 1px;
     color: #fff;
     text-align: center; }
-    a.button::first-letter {
+    a.button::first-letter, button::first-letter {
       text-transform: uppercase; }
   [id^="section-"] {
     padding: 0 20px; }
@@ -336,5 +352,68 @@ a {
     #section-blog .button {
       margin-top: 70px; }
   #section-newsletter {
-    background-image: url(../img/newsletter_bg.png); } }
+    padding-top: 50px;
+    padding-bottom: 90px;
+    background-image: url(../img/newsletter_bg.png); }
+    #section-newsletter h2.title {
+      color: #fff; }
+    #section-newsletter input {
+      border-bottom: 1px solid #fff;
+      margin-top: 70px; }
+    #section-newsletter .button.sign {
+      margin-top: 40px; }
+  #section-contact {
+    padding-top: 30px;
+    padding-bottom: 60px;
+    padding-left: 10px;
+    padding-right: 10px; }
+    #section-contact [class^='col-'] {
+      padding-left: 0;
+      padding-right: 0; }
+    #section-contact iframe {
+      height: 55%; }
+    #section-contact a {
+      font-size: 14px;
+      color: #484848; }
+    #section-contact .icon {
+      margin-bottom: 15px; }
+      #section-contact .icon img {
+        width: auto; }
+    #section-contact .company-info {
+      margin-top: 40px; }
+      #section-contact .company-info .box {
+        margin-bottom: 50px;
+        padding-left: 30px;
+        padding-right: 110px; }
+    #section-contact .form-box {
+      padding-left: 30px;
+      padding-right: 30px; }
+      #section-contact .form-box input, #section-contact .form-box textarea {
+        width: 100%;
+        border-bottom: 1px solid #95989A;
+        margin-bottom: 34px; }
+      #section-contact .form-box input {
+        padding-bottom: 15px; }
+      #section-contact .form-box textarea {
+        padding: 5px 10px; } }
+
+footer.main-footer {
+  padding-top: 34px;
+  padding-bottom: 10px;
+  background: #1A1A1A; }
+  footer.main-footer .logo {
+    margin: auto;
+    width: 190px; }
+  footer.main-footer .footer-navbar {
+    margin-top: 55px; }
+    footer.main-footer .footer-navbar li + li {
+      border-top: 1px solid rgba(255, 255, 255, 0.05); }
+    footer.main-footer .footer-navbar a {
+      display: block;
+      padding: 10px 0;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      text-transform: capitalize; }
 
