@@ -22,12 +22,12 @@
       clickable: true
     },
     breakpoints: {
-      // when window width is >= 320px
       320: {
         slidesPerView: 1,
       }, 
-      720: {
-        slidesPerView: 3,
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 20
       }, 
     }
   })
@@ -55,6 +55,12 @@
     pagination: {
       el: '.swiper-pagination',
       clickable: true
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 2.5,
+        spaceBetween: 20
+      }, 
     }
   })
 
