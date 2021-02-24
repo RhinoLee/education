@@ -56,11 +56,11 @@
     .pic  
       margin-bottom: 15px
     ul 
-      margin-top: 30px
+      margin-top: 20px
       li 
         display: flex
         align-items: center
-        margin-bottom: 12px
+        padding: 10px 0
         img 
           display: block
           width: 40px
@@ -294,6 +294,19 @@ footer.main-footer
     .courses-info 
       li
         width: 100%
+
+@media screen and (min-width: 768px)
+  #section-education
+    ul li 
+      padding: 15px 0
+
+  #section-contact 
+    .company-info
+      [class^='col-']
+        width: 100%
+  #section-client-mobile img
+    max-width: 20%
+
     
 // .main-header
 //   position: fixed

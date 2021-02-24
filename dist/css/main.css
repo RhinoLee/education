@@ -94,6 +94,12 @@ input[type="text"], input[type="email"] {
   .col-md-6 {
     width: 50%; } }
 
+@media screen and (min-width: 992px) {
+  .col-lg-6 {
+    width: 50%; }
+  .col-lg-12 {
+    width: 50%; } }
+
 @media screen and (min-width: 320px) {
   a.button, button {
     width: 134px;
@@ -140,6 +146,10 @@ input[type="text"], input[type="email"] {
     height: 9px; }
   .swiper-pagination-bullets {
     bottom: 10px; } }
+
+@media screen and (min-width: 768px) {
+  p.intro {
+    font-size: 16px; } }
 
 /* http://meyerweb.com/eric/tools/css/reset/
  * v2.0 | 20110126
@@ -237,6 +247,12 @@ input[type="text"], input[type="email"] {
   .col-md-6 {
     width: 50%; } }
 
+@media screen and (min-width: 992px) {
+  .col-lg-6 {
+    width: 50%; }
+  .col-lg-12 {
+    width: 50%; } }
+
 @media screen and (min-width: 320px) {
   a.button, button {
     width: 134px;
@@ -283,6 +299,10 @@ input[type="text"], input[type="email"] {
     height: 9px; }
   .swiper-pagination-bullets {
     bottom: 10px; } }
+
+@media screen and (min-width: 768px) {
+  p.intro {
+    font-size: 16px; } }
 
 @media screen and (min-width: 320px) {
   .mask {
@@ -403,11 +423,11 @@ input[type="text"], input[type="email"] {
     #section-education .pic {
       margin-bottom: 15px; }
     #section-education ul {
-      margin-top: 30px; }
+      margin-top: 20px; }
       #section-education ul li {
         display: flex;
         align-items: center;
-        margin-bottom: 12px; }
+        padding: 10px 0; }
         #section-education ul li img {
           display: block;
           width: 40px; }
@@ -623,4 +643,12 @@ footer.main-footer {
 @media screen and (min-width: 576px) {
   #section-courses .courses-info li {
     width: 100%; } }
+
+@media screen and (min-width: 768px) {
+  #section-education ul li {
+    padding: 15px 0; }
+  #section-contact .company-info [class^='col-'] {
+    width: 100%; }
+  #section-client-mobile img {
+    max-width: 20%; } }
 
