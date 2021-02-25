@@ -1,4 +1,5 @@
 @import reset
+@import grid
 @import common
 @import header
 
@@ -296,18 +297,103 @@ footer.main-footer
         width: 100%
 
 @media screen and (min-width: 768px)
+  .main-slider 
+    a.button 
+      padding: 15px 12px
+      width: 195px
+    .swiper-slide 
+      .txt
+        max-width: 680px  
+        > h1.slogan 
+          font-size: 52px
+        > p 
+          font-size: 18px
   #section-education
     ul li 
       padding: 15px 0
 
-  #section-contact 
-    .company-info
-      [class^='col-']
-        width: 100%
+  // #section-contact 
+  //   .company-info
+  //     [class^='col-']
+  //       width: 100%
   #section-client-mobile img
     max-width: 20%
 
-    
+  #section-contact 
+    iframe 
+      height: 200px
+    [class^='col-'] 
+      padding-left: 15px
+      padding-right: 15px
+    .container > .row 
+      flex-direction: row-reverse
+    .company-info 
+      .box 
+        padding-left: 10px
+        padding-right: 10px
+
+@media screen and (min-width: 992px)
+  .main-slider 
+    .swiper-slide 
+      .txt
+        > h1.slogan 
+          font-size: 72px
+        > p 
+          font-size: 24px
+
+  #section-education
+    padding-top: 60px
+    ul li p 
+      font-size: 24px
+    h2.title 
+      margin-bottom: 20px
+    .txt
+      padding-top: 30px
+      padding-left: 80px
+
+  #section-courses 
+    .txt 
+      padding: 30px
+    .courses-desc
+      padding-right: 0
+
+  #section-teachers 
+    h3.title 
+      font-size: 24px
+    h4.job 
+      font-size: 18px
+    .box 
+      display: flex
+      align-items: center
+      img 
+        margin: auto
+        max-width: 96px
+      .txt 
+        padding-top: 0
+        padding-left: 36px  
+
+  #section-programs .txt p
+    font-size: 16px
+
+  #section-client-mobile .intro p
+    font-size: 18px
+
+  #section-blog .txt p 
+    font-size: 18px
+
+
+@media screen and (min-width: 1200px)
+
+  #section-education
+    ul li p 
+      font-size: 30px
+    .txt
+      padding-top: 60px
+
+  #section-contact 
+    iframe 
+      height: 360px  
+
 // .main-header
 //   position: fixed
 //   width: 100%
