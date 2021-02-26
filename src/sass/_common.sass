@@ -121,6 +121,17 @@ p.intro
   
 
 @media screen and (min-width: 1200px)
-  [id ^= "section-"]
+  [id ^= "section-"], footer.main-footer
     > .container
       max-width: 1150px
+
+@media screen and (min-width: 1400px)
+  [id ^= "section-"], footer.main-footer
+    > .container
+      max-width: 1170px
+  a.button, button
+    +button(205px, $color_green)
+    padding: 20px 10px
+    border-radius: 35px
+    font-size: 20px
+    font-weight: bold

@@ -68,7 +68,11 @@ table {
   .col-lg-12 {
     width: 50%; } }
 
-.clearfix::after, .main-header .header-container::after {
+@media screen and (min-width: 1400px) {
+  .col-xxl-4 {
+    width: 33.3333%; } }
+
+.clearfix::after, .main-header .header-container::after, footer.main-footer .container::after, footer.main-footer .container > .footer-navbar ul::after {
   content: '';
   display: block;
   clear: both; }
@@ -173,8 +177,19 @@ p.intro {
       max-width: 970px; } }
 
 @media screen and (min-width: 1200px) {
-  [id^="section-"] > .container {
+  [id^="section-"] > .container, footer.main-footer > .container {
     max-width: 1150px; } }
+
+@media screen and (min-width: 1400px) {
+  [id^="section-"] > .container, footer.main-footer > .container {
+    max-width: 1170px; }
+  a.button, button {
+    width: 205px;
+    background-color: #27AE61;
+    padding: 20px 10px;
+    border-radius: 35px;
+    font-size: 20px;
+    font-weight: bold; } }
 
 @media screen and (min-width: 320px) {
   .mask {
@@ -371,16 +386,23 @@ p.intro {
         text-align: center; }
     #section-courses .view-all {
       display: none; }
-  #section-teachers .box {
-    padding: 20px 0; }
-  #section-teachers .txt {
-    padding-top: 15px;
-    text-align: center; }
-  #section-teachers h3.title {
-    margin-bottom: 10px;
-    font-size: 18px; }
-  #section-teachers h4.job {
-    font-size: 16px; }
+  #section-teachers {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    background: #F1F1F1; }
+    #section-teachers .box {
+      padding: 20px 0; }
+    #section-teachers .txt {
+      padding-top: 15px;
+      text-align: center; }
+    #section-teachers h3.title {
+      margin-bottom: 10px;
+      font-size: 18px; }
+    #section-teachers h4.job {
+      font-size: 16px;
+      font-weight: bold;
+      color: #27AE61;
+      text-transform: capitalize; }
   #section-programs {
     padding-top: 30px;
     padding-bottom: 60px; }
@@ -580,10 +602,90 @@ footer.main-footer {
     font-size: 18px; } }
 
 @media screen and (min-width: 1200px) {
+  .main-slider .pic img {
+    height: 700px; }
   #section-education ul li p {
     font-size: 30px; }
   #section-education .txt {
     padding-top: 60px; }
+  #section-features {
+    padding-top: 60px;
+    padding-bottom: 80px; }
+    #section-features p.intro {
+      padding: 0 15px; }
+  #section-teachers {
+    padding-top: 70px;
+    padding-bottom: 80px; }
+  #section-newsletter {
+    padding-top: 75px;
+    padding-bottom: 75px; }
+    #section-newsletter input {
+      margin-top: 0;
+      margin-top: 15px;
+      margin-right: 15px; }
+    #section-newsletter h2.title {
+      margin-bottom: 0; }
+    #section-newsletter .button.sign {
+      margin-top: 0; }
+    #section-newsletter .row > .col-lg-6:first-child {
+      display: flex;
+      align-items: center; }
+    #section-newsletter .input-box {
+      display: flex;
+      align-items: center; }
   #section-contact iframe {
-    height: 360px; } }
+    height: 360px; }
+  #section-contact button {
+    margin-left: unset;
+    margin-right: auto; }
+  #section-contact .form-box {
+    padding-left: 0;
+    padding-right: 0; }
+  footer.main-footer {
+    padding-bottom: 34px; }
+    footer.main-footer .container {
+      margin: auto;
+      padding-left: 15px;
+      padding-right: 15px; }
+      footer.main-footer .container > .logo {
+        float: left; }
+      footer.main-footer .container > .footer-navbar {
+        margin-top: 0;
+        float: right; }
+        footer.main-footer .container > .footer-navbar ul li {
+          float: left; }
+          footer.main-footer .container > .footer-navbar ul li + li {
+            margin-left: 40px; } }
+
+@media screen and (min-width: 1400px) {
+  #section-courses .swiper-pagination {
+    display: none; }
+  #section-courses .view-all {
+    display: block;
+    margin-top: 60px;
+    text-align: center;
+    font-size: 0;
+    opacity: 0.5; }
+    #section-courses .view-all > a {
+      display: inline-block;
+      font-size: 24px;
+      font-weight: bold;
+      color: #1A1A1A; }
+      #section-courses .view-all > a::first-letter {
+        text-transform: uppercase; }
+  #section-contact {
+    padding-top: 66px; }
+    #section-contact a {
+      font-size: 16px; }
+    #section-contact .company-info {
+      margin-top: 30px; }
+      #section-contact .company-info .col-xxl-4 {
+        padding-left: 0;
+        padding-right: 0; }
+        #section-contact .company-info .col-xxl-4 + .col-xxl-4 {
+          padding-left: 30px; }
+      #section-contact .company-info .box {
+        margin-bottom: 0;
+        padding-right: 0;
+        padding-left: 0; } }
 

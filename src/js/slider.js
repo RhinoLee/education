@@ -65,6 +65,10 @@
         slidesPerView: 2.5,
         spaceBetween: 20
       }, 
+      1200: {
+        slidesPerView: 4.2,
+        spaceBetween: 20
+      }, 
     }
   })
 

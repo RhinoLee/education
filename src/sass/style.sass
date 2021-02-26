@@ -138,6 +138,9 @@
       display: none
 
   #section-teachers 
+    padding-top: 30px
+    padding-bottom: 10px
+    background: #F1F1F1
     .box 
       padding: 20px 0
     .txt 
@@ -148,6 +151,9 @@
       font-size: 18px
     h4.job 
       font-size: 16px
+      font-weight: bold
+      color: $color_green
+      text-transform: capitalize
 
   #section-programs 
     padding-top: 30px
@@ -383,16 +389,102 @@ footer.main-footer
 
 
 @media screen and (min-width: 1200px)
-
+  .main-slider .pic img
+    height: 700px
   #section-education
     ul li p 
       font-size: 30px
     .txt
       padding-top: 60px
-
+  #section-features
+    padding-top: 60px
+    padding-bottom: 80px
+    p.intro 
+      padding: 0 15px
+  #section-teachers 
+    padding-top: 70px
+    padding-bottom: 80px
+  #section-newsletter
+    padding-top: 75px
+    padding-bottom: 75px
+    input 
+      margin-top: 0
+      margin-top: 15px
+      margin-right: 15px
+    h2.title 
+      margin-bottom: 0
+    .button.sign
+      margin-top: 0
+    .row > .col-lg-6:first-child
+      display: flex
+      align-items: center
+    .input-box
+      display: flex
+      align-items: center
   #section-contact 
     iframe 
       height: 360px  
+    button
+      margin-left: unset 
+      margin-right: auto
+    .form-box
+      padding-left: 0
+      padding-right: 0
+    
+  footer.main-footer
+    padding-bottom: 34px
+    .container  
+      @extend .clearfix
+      margin: auto
+      padding-left: 15px
+      padding-right: 15px
+      > .logo
+        float: left
+      > .footer-navbar 
+        margin-top: 0
+        float: right
+        ul 
+          @extend .clearfix
+          li 
+            float: left
+            & + li 
+              margin-left: 40px
+
+@media screen and (min-width: 1400px)
+  #section-courses 
+    .swiper-pagination
+      display: none
+    .view-all 
+      display: block
+      margin-top: 60px
+      text-align: center
+      font-size: 0
+      opacity: 0.5
+      > a 
+        display: inline-block
+        font-size: 24px
+        font-weight: bold
+        text-transform: 
+        color: #1A1A1A
+        &::first-letter
+          text-transform: uppercase
+
+  #section-contact 
+    padding-top: 66px
+    a 
+      font-size: 16px
+    
+    .company-info 
+      margin-top: 30px
+      .col-xxl-4
+        padding-left: 0
+        padding-right: 0
+        & + .col-xxl-4
+          padding-left: 30px
+      .box 
+        margin-bottom: 0
+        padding-right: 0
+        padding-left: 0
 
 // .main-header
 //   position: fixed
