@@ -11,7 +11,8 @@ module.exports = {
   entry: {
     main: './src/js/main.js',
     slider: './src/js/slider.js',
-    header: './src/js/header.js'
+    header: './src/js/header.js',
+    animation: './src/js/animation.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),

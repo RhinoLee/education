@@ -40,7 +40,6 @@
   }
 
   const setHeaderBackground = (e) => {
-    console.log(window.pageYOffset);
     if(window.pageYOffset > 10) {
       header.classList.add('bg')
     }else {
