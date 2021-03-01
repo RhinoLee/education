@@ -337,6 +337,20 @@ p.intro {
     padding-left: 20px;
     padding-right: 20px; } }
 
+[class*="fade-"] {
+  opacity: 0;
+  transition: 1s; }
+
+.fade-fadeDown {
+  transform: translate(0, -100px); }
+
+.fade-fadeUp {
+  transform: translate(0, 100px); }
+
+.active-start {
+  opacity: 1;
+  transform: translate(0, 0); }
+
 @media screen and (min-width: 320px) {
   .main-slider .txt {
     max-width: 196px; }

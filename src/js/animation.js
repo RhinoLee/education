@@ -1,7 +1,23 @@
 ;(function() {
   
   const programSectionBoxes = document.querySelectorAll('#section-programs .box')
-
+  const animateArr = [
+    {
+      name: "#section-features .col-xs-12",
+      active: "fade-fadeDown",
+      reverse: false
+    }, 
+    {
+      name: "#section-education",
+      active: "fade-fadeDown",
+      reverse: false
+    },
+    {
+      name: "#section-teachers .col-xs-6",
+      active: "fade-fadeDown",
+      reverse: false
+    },
+  ]
 
   const rotateHandler = e => {
     let {offsetX, offsetY, currentTarget} = e
@@ -18,14 +34,48 @@
 
   }
 
-  const removeRotateHandler = (e) => {
+  const removeRotateHandler = e => {
     e.currentTarget.style.transform = `perspective(500px) scale(1) rotateX(0) rotateY(0)`
   }
+
+  const scrollHandler = (animateArr) => {
+    let headerHeight = document.querySelector('.header-container').offsetHeight
+    let scrollDistance = document.documentElement.scrollTop
+    let targetTop = 0
+    let windowBottom = 0
+    let targets = null
+    animateArr.forEach( section => {
+      targets = document.querySelectorAll(section.name)
+
+      targets.forEach( target => {
+        targetTop = (target.offsetTop - headerHeight) - (target.offsetHeight) - 200
+        windowBottom = targetTop + target.offsetHeight
+
+        if(scrollDistance > targetTop && scrollDistance < windowBottom) {
+          target.classList.add('active-start')
+        }else {
+          target.classList.add(section.active)
+          if (section.reverse) {
+            target.classList.remove('active-start')
+          }
+        }
+        
+        
+      })
+    })
+  }
+
+
+
 
   programSectionBoxes.forEach( (box) => {
     box.addEventListener('mousemove', rotateHandler)
     box.addEventListener('mouseout', removeRotateHandler)
   })
 
+  window.addEventListener('scroll', function(e){
+    scrollHandler(animateArr)
+  })
 
+  scrollHandler(animateArr)
 })();
