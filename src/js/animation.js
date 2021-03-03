@@ -1,5 +1,6 @@
 ;(function() {
   
+  const loadingElements = document.querySelectorAll('#loading-page .col-xs-2')
   const programSectionBoxes = document.querySelectorAll('#section-programs .box')
   const animateArr = [
     {
@@ -65,8 +66,25 @@
     })
   }
 
+  const loadingAnimateStart = () => {
+    loadingElements.forEach( (element) => {
 
+      element.classList.add('change-color')
+      setTimeout(() => {
+        element.classList.remove('change-color')
+      }, 800);
 
+      setTimeout(() => {
+        element.classList.add('opacity')
+      }, 1600);
+
+      setTimeout(() => {
+        document.querySelector('#loading-page').style.display = 'none'
+      }, 3000);
+    } )
+  }
+
+  
 
   programSectionBoxes.forEach( (box) => {
     box.addEventListener('mousemove', rotateHandler)
@@ -78,4 +96,5 @@
   })
 
   scrollHandler(animateArr)
+  loadingAnimateStart()
 })();
