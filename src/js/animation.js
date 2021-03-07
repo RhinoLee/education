@@ -22,11 +22,6 @@
 
   const rotateHandler = e => {
     let {offsetX, offsetY, currentTarget} = e
-    
-    if(e.target !== currentTarget) {
-      offsetX += e.target.parentElement.offsetLeft
-      offsetY += e.target.parentElement.offsetTop
-    } 
 
     let xRotate = Math.floor((offsetY / currentTarget.offsetWidth) * 20) * 2 - 20
     let yRotate = Math.floor((offsetX / currentTarget.offsetHeight) * 20) * 2 - 20

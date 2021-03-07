@@ -569,7 +569,8 @@ p.intro {
       transform: translate(-50%, -50%);
       width: 60%;
       z-index: 10;
-      text-align: center; }
+      text-align: center;
+      pointer-events: none; }
       #section-programs .txt > * {
         color: #fff; }
       #section-programs .txt h3.title {
